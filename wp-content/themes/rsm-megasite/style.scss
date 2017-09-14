@@ -1098,6 +1098,22 @@ input, textarea {
         width: 100%;
         max-width: 1170px;
         margin: auto; 
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        .section-title {
+            width: 90%;
+            margin: auto;
+            margin-bottom: 30px;
+            a {
+                color: #fff;
+                text-decoration: none;
+                &:hover {
+                    color: #fed300;
+                }
+            }
+        }
         .evento {
             width: 90%;
             margin: auto;
@@ -1105,24 +1121,35 @@ input, textarea {
             color: #fff;
             display: flex;
             justify-content: space-between; 
+            margin-bottom: 30px;
+            @media (min-width: 768px) {
+                width: 47%;
+            }
             .date_place {
-                width: 15%;
+                width: 30%;
                 background: white;
                 padding: 10px;
                 color: #80bd01;
                 text-align: center; 
                 .fecha {
-                    font-size: 55px; 
+                    width: 100%;
+                    font-size: 45px; 
                 }
                 .event_time {
+                    width: 100%;
                     font-size: 20px; 
                 }
             }
             .date_time {
-                width: 80%;
+                width: 70%;
                 padding: 10px; 
+                position: relative;
                 .event_place {
                     font-size: 25px; 
+                }
+                .event_description {
+                    position: absolute;
+                    bottom: 20px;
                 }
             }
         }
