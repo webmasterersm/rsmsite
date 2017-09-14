@@ -1158,11 +1158,11 @@ input, textarea {
   color: #fff;
   text-decoration: none; }
 
-/** ////////// Eventos ////////// **/
+/** ////////// Front Eventos ////////// **/
 .eventos {
   width: 100%;
   background: #80bd01;
-  padding: 30px 0px; }
+  padding: 50px; }
   .eventos .container {
     width: 100%;
     max-width: 1170px;
@@ -1170,11 +1170,15 @@ input, textarea {
     @media (min-width: 768px) {
       .eventos .container {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between; } }
     .eventos .container .section-title {
       width: 90%;
       margin: auto;
       margin-bottom: 30px; }
+      @media (min-width: 768px) {
+        .eventos .container .section-title {
+          width: 97%; } }
       .eventos .container .section-title a {
         color: #fff;
         text-decoration: none; }
@@ -1210,6 +1214,66 @@ input, textarea {
         .eventos .container .evento .date_time .event_place {
           font-size: 25px; }
         .eventos .container .evento .date_time .event_description {
+          position: absolute;
+          bottom: 20px; }
+
+/** ////////// Page Eventos ////////// **/
+.main-eventos .eventos {
+  width: 100%;
+  background: #f6f6f6;
+  padding: 200px 0px 50px 0px;
+  margin-top: -150px; }
+  .main-eventos .eventos .container {
+    width: 100%;
+    max-width: 1170px;
+    margin: auto; }
+    @media (min-width: 768px) {
+      .main-eventos .eventos .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; } }
+    .main-eventos .eventos .container .section-title {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 30px; }
+      @media (min-width: 768px) {
+        .main-eventos .eventos .container .section-title {
+          width: 97%; } }
+      .main-eventos .eventos .container .section-title a {
+        color: #80bd01;
+        text-decoration: none; }
+        .main-eventos .eventos .container .section-title a:hover {
+          color: #fed300; }
+    .main-eventos .eventos .container .evento {
+      width: 90%;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px; }
+      @media (min-width: 768px) {
+        .main-eventos .eventos .container .evento {
+          width: 47%; } }
+      .main-eventos .eventos .container .evento .date_place {
+        width: 30%;
+        background: white;
+        padding: 10px;
+        color: #80bd01;
+        text-align: center; }
+        .main-eventos .eventos .container .evento .date_place .fecha {
+          width: 100%;
+          font-size: 45px; }
+        .main-eventos .eventos .container .evento .date_place .event_time {
+          width: 100%;
+          font-size: 20px; }
+      .main-eventos .eventos .container .evento .date_time {
+        width: 70%;
+        padding: 10px;
+        position: relative; }
+        .main-eventos .eventos .container .evento .date_time .event_place {
+          font-size: 25px; }
+        .main-eventos .eventos .container .evento .date_time .event_description {
           position: absolute;
           bottom: 20px; }
 

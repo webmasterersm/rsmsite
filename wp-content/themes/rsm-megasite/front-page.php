@@ -89,7 +89,7 @@
     <section class="eventos">
         <div class="container">
             <div class="section-title">
-                <a href="<?php bloginfo('url') ?>/eventos">
+                <a href="<?php bloginfo('url') ?>/evento">
                     <h1>
                         <i class="fa fa-calendar-o"></i>
                         Eventos
@@ -99,7 +99,7 @@
             <?php $today = date('Y-m-d');
             $args = array(
                 'post_type'         => 'eventos', 
-                'posts_per_page'    => 3,
+                'posts_per_page'    => 4,
                 'order'       => 'ASC',
                 'orderby'     => 'meta_value',
                 'meta_query'  => array(

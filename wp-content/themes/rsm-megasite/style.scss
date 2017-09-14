@@ -1089,23 +1089,27 @@ input, textarea {
                 color: #fff;
                 text-decoration: none; }
 
-/** ////////// Eventos ////////// **/
+/** ////////// Front Eventos ////////// **/
 .eventos {
     width: 100%;
     background: #80bd01;
-    padding: 30px 0px; 
+    padding: 50px; 
     .container {
         width: 100%;
         max-width: 1170px;
         margin: auto; 
         @media (min-width: 768px) {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
         }
         .section-title {
             width: 90%;
             margin: auto;
             margin-bottom: 30px;
+            @media (min-width: 768px) {
+                width: 97%;
+            }
             a {
                 color: #fff;
                 text-decoration: none;
@@ -1153,10 +1157,81 @@ input, textarea {
                 }
             }
         }
-    
-    
-    
-    
+    }
+}
+
+
+/** ////////// Page Eventos ////////// **/
+.main-eventos {
+    .eventos {
+        width: 100%;
+        background: #f6f6f6;
+        padding: 200px 0px 50px 0px; 
+        margin-top: -150px;
+        .container {
+            width: 100%;
+            max-width: 1170px;
+            margin: auto; 
+            @media (min-width: 768px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .section-title {
+                width: 90%;
+                margin: auto;
+                margin-bottom: 30px;
+                @media (min-width: 768px) {
+                    width: 97%;
+                }
+                a {
+                    color: #80bd01;
+                    text-decoration: none;
+                    &:hover {
+                        color: #fed300;
+                    }
+                }
+            }
+            .evento {
+                width: 90%;
+                margin: auto;
+                background: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                display: flex;
+                justify-content: space-between; 
+                margin-bottom: 30px;
+                @media (min-width: 768px) {
+                    width: 47%;
+                }
+                .date_place {
+                    width: 30%;
+                    background: white;
+                    padding: 10px;
+                    color: #80bd01;
+                    text-align: center; 
+                    .fecha {
+                        width: 100%;
+                        font-size: 45px; 
+                    }
+                    .event_time {
+                        width: 100%;
+                        font-size: 20px; 
+                    }
+                }
+                .date_time {
+                    width: 70%;
+                    padding: 10px; 
+                    position: relative;
+                    .event_place {
+                        font-size: 25px; 
+                    }
+                    .event_description {
+                        position: absolute;
+                        bottom: 20px;
+                    }
+                }
+            }
+        }
     }
 }
 
