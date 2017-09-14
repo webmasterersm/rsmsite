@@ -19,9 +19,16 @@ get_header();  ?>
             </div>
         </div>
     <?php endwhile; ?>
-    <?php $bg_page = get_field('bg_page'); ?>
-    <div class="eventos" style="background:url(<?php echo $bg_page['url']; ?>)">
+    <section class="eventos">
         <div class="container">
+            <div class="section-title">
+                <a href="<?php bloginfo('url') ?>/eventos">
+                    <h1>
+                        <i class="fa fa-calendar-o"></i>
+                        Eventos
+                    </h1>
+                </a>
+            </div>
             <?php $today = date('Y-m-d');
             $args = array(
                 'post_type'         => 'eventos', 
@@ -46,42 +53,31 @@ get_header();  ?>
                     $event = get_field('event_date'); 
                     $today = date('Y-m-d'); ?>
                     <div class="evento">
-                        <div class="evento_detalles">
-                            <div class="date_place">
-                                <div class="number_date">
-                                    <?php 
-                                        $date = get_field('event_date'); 
-                                        $date = new DateTime($date);
-                                    ?>
-                                    <p><?php echo $date->format('d/M'); ?></p>
-                                </div>
-                                <div class="event_place">
-                                    <p><?php the_title(); ?></p>
-                                </div>
+                        <div class="date_place">
+                            <?php 
+                                $date = get_field('event_date'); 
+                                $date = new DateTime($date);
+                            ?>
+                            <div class="fecha"><?php echo $date->format('d/M'); ?></div>
+                            <div class="event_time">
+                                <?php the_field('hour_entry'); ?> - <?php the_field('departured_hour'); ?>
+                            </div>
+                        </div>
+                        <div class="date_time">
+                            <div class="event_place">
+                                <?php the_title(); ?>
                             </div>
                             <div class="event_description">
-                                <?php the_content(); ?>
-                            </div>
-                            <div class="date_time">
-                                <?php 
-                                    $date = get_field('event_date'); 
-                                    $date = new DateTime($date);
-                                ?>
-                                <p class="event_date">
-                                    <?php echo $date->format('l, F j, Y'); ?>
-                                </p>
-                                <p class="event_time">
-                                    <?php the_field('hour_entry'); ?> - <?php the_field('departured_hour'); ?>
-                                </p>
+                                <?php the_field('event_location'); ?>
                             </div>
                         </div>
                     </div>
                 <?php endwhile; wp_reset_postdata();
             else: ?>
-               <p>No upcoming events...</p>
+               <p>No eventos...</p>
         <?php endif; ?> 
-        </div>   
-    </div>
+        </div> 
+    </section>
 </main>
 
 <?php get_footer() ?>
