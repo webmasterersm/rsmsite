@@ -1167,28 +1167,51 @@ input, textarea {
     width: 100%;
     max-width: 1170px;
     margin: auto; }
+    @media (min-width: 768px) {
+      .eventos .container {
+        display: flex;
+        justify-content: space-between; } }
+    .eventos .container .section-title {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 30px; }
+      .eventos .container .section-title a {
+        color: #fff;
+        text-decoration: none; }
+        .eventos .container .section-title a:hover {
+          color: #fed300; }
     .eventos .container .evento {
       width: 90%;
       margin: auto;
       background: rgba(0, 0, 0, 0.5);
       color: #fff;
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      margin-bottom: 30px; }
+      @media (min-width: 768px) {
+        .eventos .container .evento {
+          width: 47%; } }
       .eventos .container .evento .date_place {
-        width: 15%;
+        width: 30%;
         background: white;
         padding: 10px;
         color: #80bd01;
         text-align: center; }
         .eventos .container .evento .date_place .fecha {
-          font-size: 55px; }
+          width: 100%;
+          font-size: 45px; }
         .eventos .container .evento .date_place .event_time {
+          width: 100%;
           font-size: 20px; }
       .eventos .container .evento .date_time {
-        width: 80%;
-        padding: 10px; }
+        width: 70%;
+        padding: 10px;
+        position: relative; }
         .eventos .container .evento .date_time .event_place {
           font-size: 25px; }
+        .eventos .container .evento .date_time .event_description {
+          position: absolute;
+          bottom: 20px; }
 
 /** ////////// Cuentos Table ////////// **/
 .ediciones {

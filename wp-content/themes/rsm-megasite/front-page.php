@@ -88,10 +88,18 @@
     </section>
     <section class="eventos">
         <div class="container">
+            <div class="section-title">
+                <a href="<?php bloginfo('url') ?>/eventos">
+                    <h1>
+                        <i class="fa fa-calendar-o"></i>
+                        Eventos
+                    </h1>
+                </a>
+            </div>
             <?php $today = date('Y-m-d');
             $args = array(
                 'post_type'         => 'eventos', 
-                'posts_per_page'    => -1,
+                'posts_per_page'    => 3,
                 'order'       => 'ASC',
                 'orderby'     => 'meta_value',
                 'meta_query'  => array(
