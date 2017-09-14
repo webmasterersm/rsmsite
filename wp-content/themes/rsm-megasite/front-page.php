@@ -127,7 +127,7 @@
                                 <?php the_title(); ?>
                             </div>
                             <div class="event_description">
-                                <?php the_content(); ?>
+                                <?php the_field('event_location'); ?>
                             </div>
                         </div>
                     </div>
