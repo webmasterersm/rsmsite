@@ -1162,7 +1162,7 @@ input, textarea {
 .eventos {
   width: 100%;
   background: #80bd01;
-  padding: 50px; }
+  padding: 50px 0px; }
   .eventos .container {
     width: 100%;
     max-width: 1170px;
