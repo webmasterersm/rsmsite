@@ -21,14 +21,6 @@ get_header();  ?>
     <?php endwhile; ?>
     <section class="eventos">
         <div class="container">
-            <div class="section-title">
-                <a href="<?php bloginfo('url') ?>/eventos">
-                    <h1>
-                        <i class="fa fa-calendar-o"></i>
-                        Eventos
-                    </h1>
-                </a>
-            </div>
             <?php $today = date('Y-m-d');
             $args = array(
                 'post_type'         => 'eventos', 
